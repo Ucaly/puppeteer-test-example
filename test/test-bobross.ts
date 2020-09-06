@@ -13,7 +13,7 @@ describe('Test bobrosslipsum.com ', () => {
         } else {
             baseUrl = bobRossUrl;
         }
-        browser = await puppeteer.launch({headless: true, slowMo: 10, devtools: false});
+        browser = await puppeteer.launch({headless: true, slowMo: 10, devtools: false, args: ['--no-sandbox', '--disable-setuid-sandbox']});
         page = await browser.newPage();
         await page.setViewport({width: 1200, height: 800});
         await page.setRequestInterception(true);
