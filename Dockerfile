@@ -23,10 +23,10 @@ RUN apt-get update \
 #     browser.launch({executablePath: 'google-chrome-unstable'})
 # ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
-ADD package.json yarn.lock test util seccomp .mocharc.json global.d.ts tsconfig.json /
-#COPY test /
-#COPY util /
-#COPY seccomp /
+ADD package.json yarn.lock .mocharc.json global.d.ts tsconfig.json /
+COPY test /test
+COPY util /util
+COPY seccomp /seccomp
 #COPY .mocharc.json /
 #COPY global.d.ts /
 #COPY tscongig.json /
