@@ -35,4 +35,4 @@ RUN npm i puppeteer \
 # Run everything after as non-privileged user.
 USER pptruser
 
-CMD ["google-chrome-unstable --no-sandbox"]
+CMD ["google-chrome-stable"]
