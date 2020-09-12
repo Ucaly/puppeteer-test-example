@@ -23,7 +23,13 @@ RUN apt-get update \
 #     browser.launch({executablePath: 'google-chrome-unstable'})
 # ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
-ADD package.json yarn.lock /
+ADD package.json yarn.lock test util seccomp .mocharc.json global.d.ts tsconfig.json /
+#COPY test /
+#COPY util /
+#COPY seccomp /
+#COPY .mocharc.json /
+#COPY global.d.ts /
+#COPY tscongig.json /
 
 RUN yarn install
 # Install puppeteer so it's available in the container.
