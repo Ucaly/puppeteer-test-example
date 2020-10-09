@@ -1,4 +1,7 @@
 {
     "file": "./util/bootstrap.ts",
-    "reporter": "mocha-junit-reporter"
+    "reporter": "mocha-junit-reporter",
+    "reporterOptions": {
+        "mochaFile": "./results/report.xml"
+    }
 }
