@@ -33,20 +33,19 @@ COPY seccomp /seccomp
 #COPY .mocharc.json /
 #COPY global.d.ts /
 #COPY tscongig.json /
+RUN mkdir -p /results
 
 RUN yarn install
 # Install puppeteer so it's available in the container.
 #RUN npm i puppeteer \
     # Add user so we don't need --no-sandbox.
     # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
-RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-    && mkdir -p /home/pptruser/Downloads \
-    && mkdir -p /results \
-    && chown -R pptruser:pptruser /results \
-    && chown -R pptruser:pptruser /home/pptruser \
-    && chown -R pptruser:pptruser /node_modules
+# RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
+#    && mkdir -p /home/pptruser/Downloads \
+#    && chown -R pptruser:pptruser /home/pptruser \
+#    && chown -R pptruser:pptruser /node_modules
 
 # Run everything after as non-privileged user.
-USER pptruser
+#USER pptruser
 
 CMD yarn test
