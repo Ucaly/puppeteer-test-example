@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="3.1330" tests="2" failures="0">
-  <testsuite name="Root Suite" timestamp="2020-10-09T15:27:47" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="3.1500" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-10-09T23:21:13" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="Test bobrosslipsum.com " timestamp="2020-10-09T15:27:47" tests="2" file="/Users/yukarim/github-Ucaly/puppeteer-test-example/test/test-bobross.ts" time="3.1330" failures="0">
-    <testcase name="Test bobrosslipsum.com  Verify page url " time="3.0020" classname="Verify page url ">
+  <testsuite name="Test bobrosslipsum.com " timestamp="2020-10-09T23:21:13" tests="2" file="/Users/yukarim/github-Ucaly/puppeteer-test-example/test/test-bobross.ts" time="3.1500" failures="0">
+    <testcase name="Test bobrosslipsum.com  Verify page url " time="3.0050" classname="Verify page url ">
     </testcase>
-    <testcase name="Test bobrosslipsum.com  Verify button label " time="0.1310" classname="Verify button label ">
+    <testcase name="Test bobrosslipsum.com  Verify button label " time="0.1450" classname="Verify button label ">
     </testcase>
   </testsuite>
 </testsuites>
