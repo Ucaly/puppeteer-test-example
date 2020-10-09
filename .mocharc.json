@@ -1,7 +1,8 @@
 {
     "file": "./util/bootstrap.ts",
-    "reporter": "mocha-junit-reporter",
-    "reporterOptions": {
-        "mochaFile": "/results/report.xml"
-    }
+    "reporter": "mocha-jenkins-reporter",
+    "reporter-option": [
+        "junit_report_name=Tests",
+        "junit_report_path=./results/report.xml"
+    ]
 }
