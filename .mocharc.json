@@ -2,7 +2,7 @@
     "file": "./util/bootstrap.ts",
     "reporter": "mocha-jenkins-reporter",
     "reporter-option": [
-        "junit_report_name=Tests",
+        "junit_report_name=PuppetterTests",
         "junit_report_path=./results/report.xml"
     ]
 }
