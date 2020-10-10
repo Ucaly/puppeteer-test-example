@@ -27,13 +27,13 @@ RUN apt-get update \
 # ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 ADD package.json yarn.lock .mocharc.json global.d.ts tsconfig.json /
-COPY test /test
-COPY util /util
-COPY seccomp /seccomp
+COPY test test/
+COPY util util/
+COPY seccomp seccomp/
 #COPY .mocharc.json /
 #COPY global.d.ts /
 #COPY tscongig.json /
-RUN mkdir -p /results
+RUN mkdir -p results/
 
 RUN yarn install
 # Install puppeteer so it's available in the container.
