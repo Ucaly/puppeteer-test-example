@@ -8,18 +8,25 @@ const bobRossUrl = 'https://www.bobrosslipsum.com';
 
 describe('Test bobrosslipsum.com ', () => {
     before(async () => {
+        console.log('log1');
         if (process.env.BASEURL) {
             baseUrl =  process.env.BASEURL;
         } else {
             baseUrl = bobRossUrl;
         }
+        console.log('log2');
         browser = await puppeteer.launch({headless: true, slowMo: 10, devtools: false, args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']});
+        console.log('log3');
         page = await browser.newPage();
+        console.log('log4');
         await page.setViewport({width: 1200, height: 800});
+        console.log('log5');
         await page.setRequestInterception(true);
+        console.log('log6');
         page.on('request', (request) => {
             request.continue();
         })
+        console.log('log7');
         page.on('response', async (response) => {
             if(response.url().includes(bobRossUrl)) {
                 console.log(`RES: ${await response.url()}`);
@@ -31,7 +38,9 @@ describe('Test bobrosslipsum.com ', () => {
                 }
             }
         })
+        console.log('log8');
         await page.goto(baseUrl, {waitUntil: 'networkidle2'});
+        console.log('log9');
     });
 
     it('Verify page url ', async () => {

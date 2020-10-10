@@ -1,0 +1,10 @@
+<testsuites name="PuppetterTests">
+  <testsuite name="Test bobrosslipsum.com " tests="2" errors="0" failures="0" skipped="0" timestamp="2020-10-10T14:10:13" time="6.591">
+    <testcase classname="PuppetterTests.Test bobrosslipsum.com " name="Verify page url " time="3.004">
+    </testcase>
+    <testcase classname="PuppetterTests.Test bobrosslipsum.com " name="Verify button label " time="0.126">
+      <system-out><![CDATA[Current workers:
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
