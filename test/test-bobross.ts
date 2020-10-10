@@ -15,7 +15,7 @@ describe('Test bobrosslipsum.com ', () => {
             baseUrl = bobRossUrl;
         }
         console.log('log2');
-        browser = await puppeteer.launch({headless: true, slowMo: 10, devtools: false, args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']});
+        browser = await puppeteer.launch({executablePath: 'google-chrome-unstable', headless: true, slowMo: 10, devtools: false, args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']});
         console.log('log3');
         page = await browser.newPage();
         console.log('log4');
